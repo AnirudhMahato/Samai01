@@ -1,4 +1,5 @@
 "use client";
+
 import avatar1 from "@/assets/avatar-1.png";
 import avatar2 from "@/assets/avatar-2.png";
 import avatar3 from "@/assets/avatar-3.png";
@@ -13,7 +14,14 @@ import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
 import React from "react";
 
-const testimonials = [
+interface Testimonial {
+  text: string;
+  imageSrc: string;
+  name: string;
+  username: string;
+}
+
+const testimonials: Testimonial[] = [
   {
     text: "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention.",
     imageSrc: avatar1.src,
@@ -21,7 +29,7 @@ const testimonials = [
     username: "@jamietechguru00",
   },
   {
-    text: "Our team's productivity has skyrocketed since we started using this tool. ",
+    text: "Our team's productivity has skyrocketed since we started using this tool.",
     imageSrc: avatar2.src,
     name: "Josh Smith",
     username: "@jjsmith",
@@ -74,42 +82,52 @@ const firstColumn = testimonials.slice(0, 3);
 const secondColumn = testimonials.slice(3, 6);
 const thirdColumn = testimonials.slice(6, 9);
 
-const TestimonialsColumn = (props: {
+interface TestimonialsColumnProps {
   className?: string;
-  testimonials: typeof testimonials;
+  testimonials: Testimonial[];
   duration?: number;
+}
+
+const TestimonialsColumn: React.FC<TestimonialsColumnProps> = ({
+  className,
+  testimonials,
+  duration = 10,
 }) => (
-  <div className={props.className}>
+  <div className={twMerge("w-full", className)}>
     <motion.div
-      animate={{
-        translateY: "-50%",
-      }}
+      animate={{ translateY: "-50%" }}
       transition={{
-        duration: props.duration || 10,
+        duration,
         repeat: Infinity,
         ease: "linear",
         repeatType: "loop",
       }}
       className="flex flex-col gap-6 pb-6"
     >
-      {[...new Array(2)].fill(0).map((_, index) => (
+      {/* Duplicate the testimonials to create a seamless loop */}
+      {[...new Array(2)].map((_, index) => (
         <React.Fragment key={index}>
-          {props.testimonials.map(({ text, imageSrc, name, username }) => (
-            <div className="card">
-              <div>{text}</div>
-              <div className="flex items-center gap-2 mt-5">
+          {testimonials.map(({ text, imageSrc, name, username }) => (
+            <div
+              key={`${username}-${index}`}
+              className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md"
+            >
+              <p className="text-gray-700 dark:text-gray-300">{text}</p>
+              <div className="flex items-center gap-3 mt-5">
                 <Image
                   src={imageSrc}
-                  alt={name}
+                  alt={`${name}'s avatar`}
                   width={40}
                   height={40}
-                  className="h-10 w-10 rounded-full"
+                  className="h-10 w-10 rounded-full object-cover"
                 />
                 <div className="flex flex-col">
-                  <div className="font-medium tracking-tight leading-5">
+                  <span className="font-medium text-gray-900 dark:text-white">
                     {name}
-                  </div>
-                  <div className="leading-5 tracking-tight">{username}</div>
+                  </span>
+                  <span className="text-sm text-gray-500 dark:text-gray-400">
+                    {username}
+                  </span>
                 </div>
               </div>
             </div>
@@ -120,21 +138,23 @@ const TestimonialsColumn = (props: {
   </div>
 );
 
-export const Testimonials = () => {
+export const Testimonials: React.FC = () => {
   return (
-    <section className="bg-white">
-      <div className="container">
-        <div className="section-heading">
-          <div className="flex justify-center">
-            <div className="tag">Testimonials</div>
+    <section className="bg-white dark:bg-gray-900 py-24">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <div className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold mb-4">
+            Testimonials
           </div>
-          <h2 className="section-title mt-5">What our users say</h2>
-          <p className="section-description mt-5">
+          <h2 className="text-3xl font-bold text-gray-800 dark:text-white">
+            What Our Users Say
+          </h2>
+          <p className="mt-4 text-gray-600 dark:text-gray-400">
             From intuitive design to powerful features, our app has become an
             essential tool for users around the world.
           </p>
         </div>
-        <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[738px] overflow-hidden">
+        <div className="flex justify-center gap-6 mt-12 relative max-h-[738px] overflow-hidden">
           <TestimonialsColumn testimonials={firstColumn} duration={15} />
           <TestimonialsColumn
             testimonials={secondColumn}
@@ -146,6 +166,8 @@ export const Testimonials = () => {
             className="hidden lg:block"
             duration={17}
           />
+          {/* Optional: Add gradient overlays for visual effect */}
+          <div className="absolute top-0 left-0 w-full h-full pointer-events-none bg-gradient-to-b from-transparent to-white dark:to-gray-900"></div>
         </div>
       </div>
     </section>
