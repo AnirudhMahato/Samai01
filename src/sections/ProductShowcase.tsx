@@ -27,8 +27,7 @@ export const ProductShowcase = () => {
             A more effective way to track progress
           </h2>
           <p className="section-description mt-5">
-            Effortlessly turn your ideas into a fully functional, responsive,
-            SaaS website in just minutes with this template.
+          Seamlessly advance your NEET preparation with SamAI – the user-friendly platform that keeps track of your progress, fuels your motivation, and celebrates your milestones every step of the way.
           </p>
         </div>
         <div className="relative">

@@ -23,60 +23,61 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    text: "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention.",
-    imageSrc: avatar1.src,
-    name: "Jamie Rivera",
-    username: "@jamietechguru00",
+    text: "SamAI transformed my NEET preparation with its personalized study plans and comprehensive practice tests. The AI-driven insights helped me focus on my weak areas, and I felt fully prepared on exam day. Highly recommended!",
+    imageSrc: avatar1.src, // Replace with appropriate avatar image source
+    name: "Priya Sharma",
+    username: "@priyasharma_neet",
   },
   {
-    text: "Our team's productivity has skyrocketed since we started using this tool.",
-    imageSrc: avatar2.src,
-    name: "Josh Smith",
-    username: "@jjsmith",
+    text: "Achieving a top rank in NEET was challenging, but SamAI's interactive video lectures and real-time performance tracking made all the difference. The supportive community and expert guidance were invaluable.",
+    imageSrc: avatar2.src, // Replace with appropriate avatar image source
+    name: "Aman Verma",
+    username: "@amanverma_neet",
   },
   {
-    text: "This app has completely transformed how I manage my projects and deadlines.",
-    imageSrc: avatar3.src,
-    name: "Morgan Lee",
-    username: "@morganleewhiz",
+    text: "Balancing school and NEET prep was tough, but SamAI's flexible learning modules fit perfectly into my schedule. The detailed explanations and mock exams boosted my confidence immensely.",
+    imageSrc: avatar3.src, // Replace with appropriate avatar image source
+    name: "Neha Gupta",
+    username: "@nehagupta_neet",
   },
   {
-    text: "I was amazed at how quickly we were able to integrate this app into our workflow.",
-    imageSrc: avatar4.src,
-    name: "Casey Jordan",
-    username: "@caseyj",
+    text: "SamAI's adaptive learning technology tailored my study sessions to my needs, making complex subjects easier to understand. The consistent feedback and progress reports kept me on track throughout my preparation.",
+    imageSrc: avatar4.src, // Replace with appropriate avatar image source
+    name: "Rohit Kumar",
+    username: "@rohitkumar_med",
   },
   {
-    text: "Planning and executing events has never been easier. This app helps me keep track of all the moving parts, ensuring nothing slips through the cracks.",
-    imageSrc: avatar5.src,
-    name: "Taylor Kim",
-    username: "@taylorkimm",
+    text: "The comprehensive resources and interactive doubt-clearing sessions on SamAI were game-changers for me. I felt well-prepared and less stressed on exam day, thanks to their excellent platform.",
+    imageSrc: avatar5.src, // Replace with appropriate avatar image source
+    name: "Sanya Malik",
+    username: "@sanyamalik_neet",
   },
   {
-    text: "The customizability and integration capabilities of this app are top-notch.",
-    imageSrc: avatar6.src,
-    name: "Riley Smith",
-    username: "@rileysmith1",
+    text: "Discovering SamAI early in my NEET journey was the best decision. The extensive question bank and detailed solutions helped deepen my understanding of critical concepts. SamAI truly supports students in achieving their medical dreams.",
+    imageSrc: avatar6.src, // Replace with appropriate avatar image source
+    name: "Vikram Singh",
+    username: "@vikramsingh_neet",
   },
   {
-    text: "Adopting this app for our team has streamlined our project management and improved communication across the board.",
-    imageSrc: avatar7.src,
-    name: "Jordan Patels",
-    username: "@jpatelsdesign",
+    text: "SamAI's structured modules and regular assessments kept me organized and focused. The personalized study plans and AI-driven analytics were key to my effective preparation.",
+    imageSrc: avatar7.src, // Replace with appropriate avatar image source
+    name: "Meera Joshi",
+    username: "@meerajoshi_neet",
   },
   {
-    text: "With this app, we can easily assign tasks, track progress, and manage documents all in one place.",
-    imageSrc: avatar8.src,
-    name: "Sam Dawson",
-    username: "@dawsontechtips",
+    text: "SamAI's user-friendly interface and adaptive learning techniques made studying for NEET enjoyable and efficient. The mock exams were incredibly realistic, which boosted my confidence significantly.",
+    imageSrc: avatar8.src, // Replace with appropriate avatar image source
+    name: "Arjun Verma",
+    username: "@arjunverma_neet",
   },
   {
-    text: "Its user-friendly interface and robust features support our diverse needs.",
-    imageSrc: avatar9.src,
-    name: "Casey Harper",
-    username: "@casey09",
+    text: "With SamAI, I had access to top-notch resources and expert guidance that were essential for my NEET preparation. The platform's ability to track my progress and adjust my study plan was fantastic.",
+    imageSrc: avatar9.src, // Replace with appropriate avatar image source
+    name: "Tara Menon",
+    username: "@taramenon_neet",
   },
 ];
+
 
 const firstColumn = testimonials.slice(0, 3);
 const secondColumn = testimonials.slice(3, 6);
@@ -150,8 +151,7 @@ export const Testimonials: React.FC = () => {
             What Our Users Say
           </h2>
           <p className="mt-4 text-gray-600 dark:text-gray-400">
-            From intuitive design to powerful features, our app has become an
-            essential tool for users around the world.
+          From personalized study plans to powerful performance analytics, SamAI has become an essential tool for NEET UG aspirants striving for excellence
           </p>
         </div>
         <div className="flex justify-center gap-6 mt-12 relative max-h-[738px] overflow-hidden">

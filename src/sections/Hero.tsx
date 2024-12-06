@@ -33,9 +33,7 @@ export const Hero = () => {
               Pathway to productivity
             </h1>
             <p className="text-xl text-[#010D3E] tracking-tight mt-6">
-              Celebrate the joy of accomplishment with an app designed to track
-              your progress, motivate your efforts, and celebrate your
-              successes.
+            Achieve your NEET dreams with SamAI – the app that monitors your progress, fuels your motivation, and celebrates every milestone you reach.
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
               <button className="btn btn-primary">Get for free</button>
