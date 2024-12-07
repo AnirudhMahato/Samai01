@@ -33,14 +33,10 @@ export const Hero = () => {
               Pathway to productivity
             </h1>
             <p className="text-xl text-[#010D3E] tracking-tight mt-6">
-            Achieve your NEET dreams with SamAI – the app that monitors your progress, fuels your motivation, and celebrates every milestone you reach.
+            Crack UPSC, KPSC, UPPSC, NEET, DCET with SAMAI: Free Mock-Tests, PYQs, and Unlimited Free Mock-Tests. Study material, get score analysis, track performance. Use India's Best AI for Exam Prep now!
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
-              <button className="btn btn-primary">Get for free</button>
-              <button className="btn btn-text gap-1">
-                <span>Learn more</span>
-                <ArrowIcon className="h-5 w-5" />
-              </button>
+              <button className="btn btn-primary">Start 7 days free trail</button>
             </div>
           </div>
           <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">

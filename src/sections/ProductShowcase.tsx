@@ -1,5 +1,5 @@
 "use client";
-import productImage from "@/assets/product-image.png";
+import productImage from "@/assets/product2.jpeg";
 import pyramidImage from "@/assets/pyramid.png";
 import tubeImage from "@/assets/tube.png";
 import Image from "next/image";
@@ -27,17 +27,28 @@ export const ProductShowcase = () => {
             A more effective way to track progress
           </h2>
           <p className="section-description mt-5">
-          Seamlessly advance your NEET preparation with SamAI – the user-friendly platform that keeps track of your progress, fuels your motivation, and celebrates your milestones every step of the way.
+            Seamlessly advance your NEET preparation with SamAI – the
+            user-friendly platform that keeps track of your progress, fuels your
+            motivation, and celebrates your milestones every step of the way.
           </p>
         </div>
         <div className="relative">
-          <Image src={productImage} alt="Product Image" className="mt-10" />
+          <div className="flex justify-center items-center mt-10">
+            <Image
+              src={productImage}
+              alt="Product Image"
+              className="mt-10"
+              height={300}
+              width={300}
+            />
+          </div>
+
           <motion.img
             src={pyramidImage.src}
             alt="Pyramid Image"
             height={262}
             width={262}
-            className="hidden md:block absolute -right-36 -top-32"
+            className="hidden md:block absolute right-2 -top-32"
             style={{
               translateY,
             }}
@@ -47,7 +58,7 @@ export const ProductShowcase = () => {
             alt="Tube image"
             height={248}
             width={248}
-            className="hidden md:block absolute bottom-24 -left-36"
+            className="hidden md:block absolute bottom-24 "
             style={{
               translateY,
             }}
