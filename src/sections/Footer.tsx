@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "@/assets/logosaas.png";
+import logo from "@/assets/Samai.png";
 import SocialX from "@/assets/social-x.svg";
 import SocialInsta from "@/assets/social-insta.svg";
 import SocialLinkedIn from "@/assets/social-linkedin.svg";
@@ -29,7 +29,7 @@ export const Footer = () => {
           <SocialYoutube />
         </div>
         <p className="mt-6">
-          &copy; 2024 Your Company, Inc. All rights reserved.
+          &copy; 2024 Scontinent Technologies Pvt Ltd, Inc. All rights reserved.
         </p>
       </div>
     </footer>
