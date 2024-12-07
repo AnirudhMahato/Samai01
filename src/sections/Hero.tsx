@@ -33,10 +33,10 @@ export const Hero = () => {
               Pathway to productivity
             </h1>
             <p className="text-xl text-[#010D3E] tracking-tight mt-6">
-            Crack UPSC, KPSC, UPPSC, NEET, DCET with SAMAI: Free Mock-Tests, PYQs, and Unlimited Free Mock-Tests. Study material, get score analysis, track performance. Use India's Best AI for Exam Prep now!
+              Crack UPSC, KPSC, UPPSC, NEET, DCET with SAMAI: Free Mock-Tests, PYQs, and Unlimited Free Mock-Tests. Study material, get score analysis, track performance. Use India&apos;s Best AI for Exam Prep now!
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
-              <button className="btn btn-primary">Start 7 days free trail</button>
+              <button className="btn btn-primary">Start 7 days free trial</button>
             </div>
           </div>
           <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">
